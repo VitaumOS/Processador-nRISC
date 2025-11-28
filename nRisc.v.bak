@@ -1,0 +1,209 @@
+`include "PC.v"
+`include "Somador.v"
+`include "Porta_AND.v"
+`include "MUX.v"
+`include "Extensor_Sinal_5b8.v" // Usaremos o Extensor 5b8 para o Target/Imm
+`include "Banco_Registradores.v"
+`include "ULA.v"
+`include "ULA_Controle.v"
+`include "Unidade_Controle.v"
+`include "Registrador_COND.v"
+// Observação: O Extensor_Sinal_3b8.v e MUX_3bit não foram usados, mas estão disponíveis.
+
+module nRisc (
+    input wire clk,
+    input wire reset,
+    
+    // Conexão com a Memória de Instrução (IF - Fetch)
+    output wire [7:0] instrucao_endereco, // PC
+    input wire [7:0] instrucao_lida,     // RI
+    
+    // Conexão com a Memória de Dados (MEM)
+    output wire [7:0] dado_endereco,      // Endereço (ULA Result)
+    output wire [7:0] dado_escrito,       // Dado para SW (ReadData2)
+    output wire dado_MemWrite,            // Controle de Escrita (MemWrite)
+    output wire dado_MemRead,             // Controle de Leitura (MemRead)
+    input wire [7:0] dado_lido            // Dado lido (Load Data)
+);
+
+    // ----------------------------------------------------------------------
+    // 1. Definição de Sinais e Fios (Wires)
+    // ----------------------------------------------------------------------
+    
+    // Fios de controle (Saídas da Unidade de Controle)
+    wire RegDst, RegWrite, MemRead, MemWrite, Branch, Jump, ULASrc, Halt;
+    wire [1:0] ULAOp;
+    
+    // Fios de controle da ULA (Saída da ULA_Controle)
+    wire [1:0] ULA_Control;
+
+    // Fios de PC
+    wire [7:0] PC_Next_Seq, PC_Target_Ext, PC_Branch_Target, PC_Jump_Target, PC_MUX_Branch_Out, PC_MUX_Final_Out;
+    wire [7:0] PC_Atual;
+    wire Branch_And_Cond;
+    
+    // Fios da Instrução
+    wire [7:0] IR = instrucao_lida;
+    wire [2:0] Opcode = IR[7:5];
+    wire Funct        = IR[4];
+    
+    // Campos de Registradores (2 bits para 4 registradores)
+    wire [1:0] Reg_Rs = IR[3:2]; // Endereço de Leitura A (Fonte 1)
+    wire [1:0] Reg_Rt = IR[1:0]; // Endereço de Leitura B (Fonte 2)
+    
+    // Campo de Endereço/Imediato (5 bits)
+    wire [4:0] Imm5_Target5 = IR[4:0];
+    
+    // Fios do Banco de Registradores
+    wire [1:0] Reg_Write_Addr; // Endereço para Escrita (Rd)
+    wire [7:0] Read_Data1, Read_Data2; // Dados lidos
+    wire [7:0] Write_Data; // Dado a ser escrito
+
+    // Fios da ULA
+    wire [7:0] ULA_Data2_MuxOut; // Entrada B (Mux ULASrc)
+    wire [7:0] ULA_Result;
+    wire Zero_ULA; // Sinal de Zero da ULA
+    
+    // Fios do Registrador COND
+    wire Cond_ULA;
+    wire Cond_Atual;
+    
+    // Fios de HALT
+    assign dado_MemRead = MemRead;
+    assign dado_MemWrite = MemWrite;
+    
+    // ----------------------------------------------------------------------
+    // 2. BUSCA DE INSTRUÇÃO (IF)
+    // ----------------------------------------------------------------------
+    
+    // 2.1 Contador de Programa (PC)
+    PC PC_Reg (.clk(clk), .reset(reset), .novo_PC(PC_MUX_Final_Out), .pc_atual(PC_Atual));
+    assign instrucao_endereco = PC_Atual; // PC para a Memória de Instrução
+
+    // 2.2 Somador PC + 1
+    Somador PC_Adder_Seq (.d1(PC_Atual), .d2(8'd1), .saida(PC_Next_Seq));
+
+    // ----------------------------------------------------------------------
+    // 3. UNIDADE DE CONTROLE E DECODIFICAÇÃO (ID)
+    // ----------------------------------------------------------------------
+
+    // 3.1 Unidade de Controle Principal
+    Unidade_Controle UC (
+        .Opcode(Opcode), .Funct(Funct),
+        .RegDst(RegDst), .RegWrite(RegWrite), .MemRead(MemRead), 
+        .MemWrite(MemWrite), .Branch(Branch), .Jump(Jump), 
+        .ULASrc(ULASrc), .Halt(Halt), .ULAOp(ULAOp)
+    );
+    
+    // 3.2 Extensor de Sinal 5b para 8b (para Imm / Target)
+    Extensor_Sinal_5b8 Ext_Imm (.entrada(Imm5_Target5), .saida(PC_Target_Ext)); 
+
+    // 3.3 MUX RegDst (Seleciona Endereço de Escrita)
+    // Reg_Rt: Endereço de escrita para I-Type (LW/SW)
+    // Imm5_Target5[1:0]: Deve ser o endereço de escrita para R-Type.
+    // Como R-Type usa os 4 bits restantes para Rs e Rt, e as instruções R-Type usam o mesmo campo para o destino (Rd)
+    // vamos assumir que o destino é o mesmo campo usado para Rt (IR[1:0]).
+    // Nota: O seu BancoRegistradores usa 2 bits (4 regs), então os campos são de 2 bits.
+    wire [1:0] Reg_Rd_Rtype = IR[1:0]; // Assumindo Rd = Rt para R-Type
+    
+    // MUX para o endereço de escrita: 0=Rt (I-Type), 1=Rd (R-Type).
+    // O seu Unidade_Controle.v seta RegDst=1 para ADD/SUB/NOT (R-Type).
+    // O seu Unidade_Controle.v seta RegDst=0 para LW (I-Type).
+    // O seu MUX.v é MUX(d1, d2, sel) -> sel=1 escolhe d1. O MUX fornecido é 8 bits.
+    // Precisamos de um MUX 2:1 de 2 bits para o endereço de registrador:
+
+    assign Reg_Write_Addr = RegDst ? Reg_Rd_Rtype : Reg_Rt; 
+
+    // 3.4 Banco de Registradores
+    Banco_Registradores BR (
+        .clk(clk), .reset(reset), 
+        .habilita_escrita(RegWrite), 
+        .endereco_leitura_A(Reg_Rs), 
+        .endereco_leitura_B(Reg_Rt), 
+        .endereco_escrita(Reg_Write_Addr), 
+        .dado_escrita(Write_Data), 
+        .dado_leitura_A(Read_Data1), 
+        .dado_leitura_B(Read_Data2)
+    );
+
+    // ----------------------------------------------------------------------
+    // 4. EXECUÇÃO (EX)
+    // ----------------------------------------------------------------------
+
+    // 4.1 ULA_Controle
+    ULA_Controle UC_ULA (.ULAOp(ULAOp), .Funct(Funct), .ULA_Control(ULA_Control));
+
+    // 4.2 MUX ULASrc (Entrada B da ULA)
+    // MUX(d1, d2, sel) -> sel=1 escolhe d1 (ULASrc=1 -> Ext_Imm, ULASrc=0 -> Read_Data2)
+    // O MUX fornecido (`MUX.v`) é para 8 bits.
+    MUX MUX_ULASrc (.d1(PC_Target_Ext), .d2(Read_Data2), .seletor(ULASrc), .saida(ULA_Data2_MuxOut));
+
+    // 4.3 ULA
+    ULA ULA_Unit (
+        .d1(Read_Data1), 
+        .d2(ULA_Data2_MuxOut), 
+        .ULA_Control(ULA_Control),
+        .Resultado(ULA_Result), 
+        .COND(Cond_ULA) // Saída da ULA (para SLT)
+        // O ULA.v fornecido NÃO tem a flag Zero. Iremos gerá-la:
+    );
+
+    // Condição Zero (implícita: resultado da ULA é zero)
+    assign Zero_ULA = (ULA_Result == 8'b00000000); 
+
+    // 4.4 Registrador COND (para BEQ)
+    // Reset_cond deve ser ativado após o uso da flag no BEQ. 
+    // Como é Uniciclo, vamos resetar o COND a cada ciclo, a menos que uma nova operação SLT o ative.
+    wire reset_cond_beq = Branch & Cond_Atual; // Resetado se for BEQ e o salto ocorrer
+    
+    // A ULA não produz a flag Zero, mas o BEQ usa o registrador COND
+    // De acordo com o Relatório 7, BEQ salta se (COND) for satisfeita.
+    // Usaremos a flag de Condição (COND) lida do registrador.
+    Registrador_COND Reg_COND (
+        .clk(clk), .reset(reset), 
+        .cond_ULA(Cond_ULA), 
+        .reset_cond(reset_cond_beq), // Resetado se o BEQ saltar
+        .cond_atual(Cond_Atual)      // Flag lida
+    );
+
+    // ----------------------------------------------------------------------
+    // 5. ACESSO À MEMÓRIA (MEM)
+    // ----------------------------------------------------------------------
+
+    // 5.1 Endereço de Dados (para LW/SW) é a saída da ULA
+    assign dado_endereco = ULA_Result; 
+    
+    // 5.2 Dado para Escrita (para SW) é o segundo dado lido do Banco de Registradores
+    assign dado_escrito = Read_Data2; 
+
+    // ----------------------------------------------------------------------
+    // 6. ESCRITA DE VOLTA (WB)
+    // ----------------------------------------------------------------------
+
+    // 6.1 MUX MemToReg (Seleção do Dado de Escrita)
+    // MUX(d1, d2, sel) -> sel=1 escolhe d1 (MemRead=1 -> dado_lido, MemRead=0 -> ULA_Result)
+    MUX MUX_MemToReg (.d1(dado_lido), .d2(ULA_Result), .seletor(MemRead), .saida(Write_Data));
+
+    // ----------------------------------------------------------------------
+    // 7. LÓGICA DE ATUALIZAÇÃO DO PC
+    // ----------------------------------------------------------------------
+
+    // 7.1 Lógica de Desvio Condicional (Branch & Cond)
+    Porta_AND AND_Branch_Cond (.d1(Branch), .d2(Cond_Atual), .saida(Branch_And_Cond));
+
+    // 7.2 MUX PC-Branch (Seleção Sequencial ou Branch)
+    // Target para Branch (Imm estendido)
+    Somador Add_Branch_Target (.d1(PC_Atual), .d2(PC_Target_Ext), .saida(PC_Branch_Target));
+    
+    // MUX(d1, d2, sel) -> sel=1 escolhe d1 (Branch_And_Cond=1 -> PC_Branch_Target)
+    MUX MUX_PC_Branch (.d1(PC_Branch_Target), .d2(PC_Next_Seq), .seletor(Branch_And_Cond), .saida(PC_MUX_Branch_Out));
+
+    // 7.3 MUX PC-Jump (Seleção Jump/Final)
+    // Target para Jump (Imm estendido)
+    // No seu projeto, J e BEQ usam Endereçamento Pseudo-Direto (Target absoluto).
+    assign PC_Jump_Target = PC_Target_Ext;
+
+    // MUX(d1, d2, sel) -> sel=1 escolhe d1 (Jump=1 -> PC_Jump_Target)
+    MUX MUX_PC_Jump (.d1(PC_Jump_Target), .d2(PC_MUX_Branch_Out), .seletor(Jump), .saida(PC_MUX_Final_Out));
+
+endmodule

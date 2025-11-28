@@ -1,0 +1,19 @@
+module MUX(
+
+	input wire [7:0] d1, d2,
+	input wire seletor,
+	
+	output reg [7:0] saida
+
+);
+
+
+	always @* begin
+		
+		if (seletor)
+			saida = d1;
+		else
+			saida = d2;
+	end
+	
+endmodule

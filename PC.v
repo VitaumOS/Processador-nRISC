@@ -4,7 +4,6 @@ module PC (
     input  wire [7:0] novo_PC,				// Valor do PC que será inserido
     output reg  [7:0] pc_atual				// Valor atual do PC
 );
-	
     // escrita na borda de subida
     always @(posedge clk or posedge reset) begin
         if (reset)

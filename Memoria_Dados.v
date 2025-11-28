@@ -13,15 +13,16 @@ module Memoria_Dados (
     //Escrita na borda de subida
     always @(posedge clk) begin
         if (habilita_escrita) begin
-            memoria[endereco] <= dado_entrada;
+            memoria[endereco] = dado_entrada;
         end
     end
 	 
     // leitura na borda de descida
-    always @(negedge clk or posedge reset) begin
-        if (habilita_leitura)
-            dado_saida <= memoria[endereco];
-		  else if (reset)
-            dado_saida <= 8'b0; 				//O reset ira funcionar apenas para a saida
+    always @* begin
+		  if (reset)
+            dado_saida = 8'b0; 				//O reset ira funcionar apenas para a saida
+        else if (habilita_leitura)
+            dado_saida = memoria[endereco];
+		  
     end
 endmodule

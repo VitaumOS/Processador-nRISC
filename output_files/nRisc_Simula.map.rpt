@@ -1,0 +1,350 @@
+Analysis & Synthesis report for nRisc_Simula
+Fri Nov 28 17:26:29 2025
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "MUX:Mux_ALUSrc1"
+ 10. Port Connectivity Checks: "Unidade_Controle:UC"
+ 11. Port Connectivity Checks: "Somador:Somador"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 28 17:26:29 2025           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; nRisc_Simula                                    ;
+; Top-level Entity Name              ; nRisc                                           ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 0                                               ;
+;     Total combinational functions  ; 0                                               ;
+;     Dedicated logic registers      ; 0                                               ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 2                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; nRisc              ; nRisc_Simula       ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                          ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+; Banco_Registradores.v            ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Banco_Registradores.v ;         ;
+; Memoria_Dados.v                  ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Dados.v       ;         ;
+; PC.v                             ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/PC.v                  ;         ;
+; Memoria_Instrucao.v              ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Instrucao.v   ;         ;
+; Registrador_COND.v               ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Registrador_COND.v    ;         ;
+; ULA.v                            ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ULA.v                 ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/MUX.v                 ;         ;
+; Extensor_Sinal_3b8.v             ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_3b8.v  ;         ;
+; Extensor_Sinal_5b8.v             ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_5b8.v  ;         ;
+; Somador.v                        ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Somador.v             ;         ;
+; Porta_AND.v                      ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Porta_AND.v           ;         ;
+; nRisc.v                          ; yes             ; User Verilog HDL File        ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v               ;         ;
+; unidade_controle.v               ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/unidade_controle.v    ;         ;
+; ula_controle.v                   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ula_controle.v        ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+;                                             ;       ;
+; Total combinational functions               ; 0     ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 0     ;
+;     -- 3 input functions                    ; 0     ;
+;     -- <=2 input functions                  ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 0     ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 2     ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |nRisc                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 2    ; 0            ; |nRisc              ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "MUX:Mux_ALUSrc1" ;
++------+-------+----------+-------------------+
+; Port ; Type  ; Severity ; Details           ;
++------+-------+----------+-------------------+
+; d1   ; Input ; Info     ; Stuck at GND      ;
++------+-------+----------+-------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Unidade_Controle:UC"                                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Halt ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "Somador:Somador" ;
++----------+-------+----------+---------------+
+; Port     ; Type  ; Severity ; Details       ;
++----------+-------+----------+---------------+
+; d2[7..1] ; Input ; Info     ; Stuck at GND  ;
+; d2[0]    ; Input ; Info     ; Stuck at VCC  ;
++----------+-------+----------+---------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Fri Nov 28 17:26:29 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nRisc_Simula -c nRisc_Simula
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file nrisc_simula.v
+    Info (12023): Found entity 1: nRisc_Simula
+Info (12021): Found 1 design units, including 1 entities, in source file banco_registradores.v
+    Info (12023): Found entity 1: Banco_Registradores
+Info (12021): Found 1 design units, including 1 entities, in source file memoria_dados.v
+    Info (12023): Found entity 1: Memoria_Dados
+Info (12021): Found 1 design units, including 1 entities, in source file pc.v
+    Info (12023): Found entity 1: PC
+Info (12021): Found 1 design units, including 1 entities, in source file memoria_instrucao.v
+    Info (12023): Found entity 1: Memoria_Instrucao
+Warning (12019): Can't analyze file -- file Verilog6.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file registrador_cond.v
+    Info (12023): Found entity 1: Registrador_COND
+Info (12021): Found 1 design units, including 1 entities, in source file ula.v
+    Info (12023): Found entity 1: ULA
+Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux.v
+    Info (12023): Found entity 1: MUX
+Info (12021): Found 1 design units, including 1 entities, in source file extensor_sinal_3b8.v
+    Info (12023): Found entity 1: Extensor_Sinal_3b8
+Info (12021): Found 1 design units, including 1 entities, in source file extensor_sinal_5b8.v
+    Info (12023): Found entity 1: Extensor_Sinal_5b8
+Info (12021): Found 1 design units, including 1 entities, in source file somador.v
+    Info (12023): Found entity 1: Somador
+Info (12021): Found 1 design units, including 1 entities, in source file porta_and.v
+    Info (12023): Found entity 1: Porta_AND
+Info (12021): Found 1 design units, including 1 entities, in source file nrisc.v
+    Info (12023): Found entity 1: nRisc
+Info (12127): Elaborating entity "nRisc" for the top level hierarchy
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC"
+Info (12128): Elaborating entity "Somador" for hierarchy "Somador:Somador"
+Info (12128): Elaborating entity "Memoria_Instrucao" for hierarchy "Memoria_Instrucao:InstrMem"
+Warning (10858): Verilog HDL warning at Memoria_Instrucao.v(7): object memoria used but never assigned
+Warning (12125): Using design file unidade_controle.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: Unidade_Controle
+Info (12128): Elaborating entity "Unidade_Controle" for hierarchy "Unidade_Controle:UC"
+Warning (10270): Verilog HDL Case Statement warning at unidade_controle.v(28): incomplete case statement has no default case item
+Info (12128): Elaborating entity "Banco_Registradores" for hierarchy "Banco_Registradores:BancoReg"
+Info (12128): Elaborating entity "Extensor_Sinal_5b8" for hierarchy "Extensor_Sinal_5b8:Ext5"
+Info (12128): Elaborating entity "Extensor_Sinal_3b8" for hierarchy "Extensor_Sinal_3b8:Ext3"
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:Mux_ALUSrc1"
+Warning (12125): Using design file ula_controle.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ULA_Controle
+Info (12128): Elaborating entity "ULA_Controle" for hierarchy "ULA_Controle:ULA_CTRL"
+Warning (10270): Verilog HDL Case Statement warning at ula_controle.v(12): incomplete case statement has no default case item
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1"
+Info (12128): Elaborating entity "Porta_AND" for hierarchy "Porta_AND:AND_Reset_Cond"
+Info (12128): Elaborating entity "Registrador_COND" for hierarchy "Registrador_COND:Reg_COND"
+Info (12128): Elaborating entity "Memoria_Dados" for hierarchy "Memoria_Dados:DataMem"
+Warning (10240): Verilog HDL Always Construct warning at Memoria_Dados.v(22): inferring latch(es) for variable "dado_saida", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "dado_saida[0]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[1]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[2]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[3]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[4]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[5]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[6]" at Memoria_Dados.v(24)
+Info (10041): Inferred latch for "dado_saida[7]" at Memoria_Dados.v(24)
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLK"
+    Warning (15610): No output dependent on input pin "RESET"
+Info (21057): Implemented 2 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 0 output pins
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
+    Info: Peak virtual memory: 4594 megabytes
+    Info: Processing ended: Fri Nov 28 17:26:29 2025
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

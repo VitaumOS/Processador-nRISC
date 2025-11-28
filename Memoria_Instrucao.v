@@ -7,7 +7,7 @@ module Memoria_Instrucao(
 	reg [7:0] memoria [255:0]; 				// 256 bytes de memória
 	always @(negedge clk or posedge reset) begin
 		if (reset)
-         instrucao_saida <= 8'b0;
+         instrucao_saida <= memoria[0];
       else
 			instrucao_saida <= memoria[endereco];
    end

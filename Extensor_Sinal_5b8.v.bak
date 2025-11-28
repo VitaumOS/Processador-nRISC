@@ -1,0 +1,19 @@
+module Extensor_Sinal_5b8(
+	input wire [4:0] entrada,
+	
+	output reg [7:0] saida
+
+);
+
+	initial begin
+	
+		wire [7:0] saida_ext = {3'b000, entrada};
+		
+	end
+	
+	always @* begin
+	
+		saida = saida_ext;
+	end
+
+endmodule

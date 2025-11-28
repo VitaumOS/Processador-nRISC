@@ -1,0 +1,497 @@
+# Reading D:/Quartus/modelsim_ase/tcl/vsim/pref.tcl 
+# do nRisc_Simula_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\Quartus\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Banco_Registradores.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Banco_Registradores
+# 
+# Top level modules:
+# 	Banco_Registradores
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Dados.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Memoria_Dados
+# 
+# Top level modules:
+# 	Memoria_Dados
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/PC.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module PC
+# 
+# Top level modules:
+# 	PC
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Instrucao.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Memoria_Instrucao
+# 
+# Top level modules:
+# 	Memoria_Instrucao
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Registrador_COND.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Registrador_COND
+# 
+# Top level modules:
+# 	Registrador_COND
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ULA.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA
+# 
+# Top level modules:
+# 	ULA
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/MUX.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MUX
+# 
+# Top level modules:
+# 	MUX
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_3b8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Extensor_Sinal_3b8
+# 
+# Top level modules:
+# 	Extensor_Sinal_3b8
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_5b8.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Extensor_Sinal_5b8
+# 
+# Top level modules:
+# 	Extensor_Sinal_5b8
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Somador.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Somador
+# 
+# Top level modules:
+# 	Somador
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Porta_AND.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Porta_AND
+# 
+# Top level modules:
+# 	Porta_AND
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module nRisc
+# 
+# Top level modules:
+# 	nRisc
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/unidade_controle.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module Unidade_Controle
+# 
+# Top level modules:
+# 	Unidade_Controle
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ula_controle.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ULA_Controle
+# 
+# Top level modules:
+# 	ULA_Controle
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC\ I/Aula\ 13/nRISC/Processador-nRISC {C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module nRisc_Simula
+# 
+# Top level modules:
+# 	nRisc_Simula
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  nRisc_Simula
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps nRisc_Simula 
+# Loading work.nRisc_Simula
+# Loading work.nRisc
+# Loading work.PC
+# Loading work.Somador
+# Loading work.Memoria_Instrucao
+# Loading work.Unidade_Controle
+# Loading work.Banco_Registradores
+# Loading work.Extensor_Sinal_5b8
+# Loading work.Extensor_Sinal_3b8
+# Loading work.MUX
+# Loading work.ULA_Controle
+# Loading work.ULA
+# Loading work.Porta_AND
+# Loading work.Registrador_COND
+# Loading work.Memoria_Dados
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Inicializando simulacao do nRisc Uniciclo de 8 bits...
+# Memoria:   5
+# Memoria:   8
+# Memoria:  -1
+# Memoria:   1
+# Memoria:  10
+# 
+# Tempo: 5ns | Clock = 1 | Reset = 0
+# PC=  0 | Instrucao=10001000
+# Decodificacao: Opcode=100 | Funct=0 | R1 = 1 | R2 = 0 | Imm3=0 | Target= 8
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
+# ULA: In1=  0 In2=  0 | Out=  0 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000000
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = xxxxxxxx | R3 = xxxxxxxx
+# 
+# Tempo: 15ns | Clock = 1 | Reset = 0
+# PC=  1 | Instrucao=10010001
+# Decodificacao: Opcode=100 | Funct=1 | R1 = 2 | R2 = 0 | Imm3=1 | Target=17
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
+# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
+# Mem Dados (Interna): Endereco=10 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = 00000001 | R3 = xxxxxxxx
+# 
+# Tempo: 25ns | Clock = 1 | Reset = 0
+# PC=  2 | Instrucao=10011101
+# Decodificacao: Opcode=100 | Funct=1 | R1 = 3 | R2 = 2 | Imm3=5 | Target=29
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
+# ULA: In1=  0 In2=  5 | Out=  5 | COND=0
+# Mem Dados (Interna): Endereco=11 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 35ns | Clock = 1 | Reset = 0
+# PC=  3 | Instrucao=01000010
+# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
+# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  x In2=  0 | Out=  x | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000101 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 45ns | Clock = 1 | Reset = 0
+# PC=  4 | Instrucao=10100001
+# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  5 In2=  5 | Out=250 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111010
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111010 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 55ns | Clock = 1 | Reset = 0
+# PC=  5 | Instrucao=00100100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=250 In2=  1 | Out=251 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111011
+# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111011 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 65ns | Clock = 1 | Reset = 0
+# PC=  6 | Instrucao=01000011
+# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=251 In2=  0 | Out=251 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111011 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 75ns | Clock = 1 | Reset = 0
+# PC=  7 | Instrucao=00101100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 85ns | Clock = 1 | Reset = 0
+# PC=  8 | Instrucao=10101110
+# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  5 | Out=  0 | COND=1
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 95ns | Clock = 1 | Reset = 0
+# PC=  9 | Instrucao=11000011
+# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
+# ULA: In1=251 In2=  1 | Out=252 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 105ns | Clock = 1 | Reset = 0
+# PC=  3 | Instrucao=01000010
+# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
+# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=251 In2=  1 | Out=252 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00001000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 115ns | Clock = 1 | Reset = 0
+# PC=  4 | Instrucao=10100001
+# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  8 In2=  8 | Out=247 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11110111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11110111 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 125ns | Clock = 1 | Reset = 0
+# PC=  5 | Instrucao=00100100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=247 In2=  1 | Out=248 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 135ns | Clock = 1 | Reset = 0
+# PC=  6 | Instrucao=01000011
+# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=248 In2=  1 | Out=249 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 145ns | Clock = 1 | Reset = 0
+# PC=  7 | Instrucao=00101100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  1 | Out=  2 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 155ns | Clock = 1 | Reset = 0
+# PC=  8 | Instrucao=10101110
+# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  2 In2=  5 | Out=  0 | COND=1
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00001000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 165ns | Clock = 1 | Reset = 0
+# PC=  9 | Instrucao=11000011
+# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
+# ULA: In1=248 In2=  2 | Out=250 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 175ns | Clock = 1 | Reset = 0
+# PC=  3 | Instrucao=01000010
+# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
+# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=248 In2=  2 | Out=250 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 185ns | Clock = 1 | Reset = 0
+# PC=  4 | Instrucao=10100001
+# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=255 In2=255 | Out=  0 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000000
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 195ns | Clock = 1 | Reset = 0
+# PC=  5 | Instrucao=00100100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 205ns | Clock = 1 | Reset = 0
+# PC=  6 | Instrucao=01000011
+# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  2 | Out=  3 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 215ns | Clock = 1 | Reset = 0
+# PC=  7 | Instrucao=00101100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  2 In2=  1 | Out=  3 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000011
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 225ns | Clock = 1 | Reset = 0
+# PC=  8 | Instrucao=10101110
+# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  3 In2=  5 | Out=  0 | COND=1
+# Mem Dados (Interna): Endereco=01 DadoEscrito=11111111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 235ns | Clock = 1 | Reset = 0
+# PC=  9 | Instrucao=11000011
+# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  3 | Out=  4 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 245ns | Clock = 1 | Reset = 0
+# PC=  3 | Instrucao=01000010
+# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
+# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  3 | Out=  4 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 255ns | Clock = 1 | Reset = 0
+# PC=  4 | Instrucao=10100001
+# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  1 In2=  1 | Out=254 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111110
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111110 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 265ns | Clock = 1 | Reset = 0
+# PC=  5 | Instrucao=00100100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=254 In2=  1 | Out=255 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 275ns | Clock = 1 | Reset = 0
+# PC=  6 | Instrucao=01000011
+# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=255 In2=  3 | Out=  2 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 285ns | Clock = 1 | Reset = 0
+# PC=  7 | Instrucao=00101100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  3 In2=  1 | Out=  4 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000100
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 295ns | Clock = 1 | Reset = 0
+# PC=  8 | Instrucao=10101110
+# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  4 In2=  5 | Out=  0 | COND=1
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 305ns | Clock = 1 | Reset = 0
+# PC=  9 | Instrucao=11000011
+# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
+# ULA: In1=255 In2=  4 | Out=  3 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 315ns | Clock = 1 | Reset = 0
+# PC=  3 | Instrucao=01000010
+# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
+# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=255 In2=  4 | Out=  3 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 00001010 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 325ns | Clock = 1 | Reset = 0
+# PC=  4 | Instrucao=10100001
+# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1= 10 In2= 10 | Out=245 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11110101
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11110101 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 335ns | Clock = 1 | Reset = 0
+# PC=  5 | Instrucao=00100100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=245 In2=  1 | Out=246 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=11110110
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 345ns | Clock = 1 | Reset = 0
+# PC=  6 | Instrucao=01000011
+# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=246 In2=  4 | Out=250 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 355ns | Clock = 1 | Reset = 0
+# PC=  7 | Instrucao=00101100
+# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
+# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  4 In2=  1 | Out=  5 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00000101
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 365ns | Clock = 1 | Reset = 0
+# PC=  8 | Instrucao=10101110
+# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=  5 In2=  5 | Out=  0 | COND=0
+# Mem Dados (Interna): Endereco=01 DadoEscrito=00001010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 375ns | Clock = 1 | Reset = 0
+# PC=  9 | Instrucao=11000011
+# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
+# ULA: In1=246 In2=  5 | Out=251 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# 
+# Tempo: 385ns | Clock = 1 | Reset = 0
+# PC= 10 | Instrucao=00000000
+# Decodificacao: Opcode=000 | Funct=0 | R1 = 0 | R2 = 0 | Imm3=0 | Target= 0
+# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
+# ULA: In1=246 In2=246 | Out=236 | COND=0
+# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
+# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# Memoria:  -5
+# Memoria:  -8
+# Memoria:   1
+# Memoria:  -1
+# Memoria: -10
+# ** Note: $finish    : C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v(110)
+#    Time: 385 ps  Iteration: 1  Instance: /nRisc_Simula
+# 1
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 110
+# Simulation Breakpoint: 1
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 110
+# MACRO ./nRisc_Simula_run_msim_rtl_verilog.do PAUSED at line 30

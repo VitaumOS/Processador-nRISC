@@ -16,22 +16,22 @@ module Banco_Registradores (
 
 
     // escrita na borda de subida do clock
-    always @(posedge clk or posedge reset) begin
+    always @(posedge clk) begin
         if (reset) begin
-            registradores[0] <= 8'b0;
-            registradores[1] <= 8'b0;
-            registradores[2] <= 8'b0;
-            registradores[3] <= 8'b0;
+            registradores[0] = 8'b0;
+            registradores[1] = 8'b0;
+            registradores[2] = 8'b0;
+            registradores[3] = 8'b0;
         end
         else if (habilita_escrita) begin
-            registradores[endereco_escrita] <= dado_escrita;
+            registradores[endereco_escrita] = dado_escrita;
         end
     end
 
     // leitura na borda de descida do clock
-    always @(negedge clk) begin
-        dado_leitura_A <= registradores[endereco_leitura_A];
-        dado_leitura_B <= registradores[endereco_leitura_B];
+    always @* begin
+        dado_leitura_A = registradores[endereco_leitura_A];
+        dado_leitura_B = registradores[endereco_leitura_B];
     end
 
 endmodule
