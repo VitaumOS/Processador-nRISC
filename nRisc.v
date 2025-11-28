@@ -1,8 +1,6 @@
-
-// Módulo principal do processador nRisc Uniciclo de 8 bits
 module nRisc(
     input wire CLK,
-    input wire RESET // O sinal RESET é essencial para todos os seus registradores
+    input wire RESET 
 		
 );
 
@@ -27,31 +25,30 @@ module nRisc(
 	wire RegDst, RegWrite, MemRead, MemWrite, Branch, Jump, ULASrc, Halt;
 	wire [1:0] ULAOp; 
 	
-	wire [1:0] ULA_Control;          // Controle Final da ULA (2 bits)
+	wire [1:0] ULA_Control;          
 	
-	wire Cond_ULA;                   // Saída da ULA (para SLT)
-	wire Cond_Atual;                 // Saída do Registrador_COND
+	wire Cond_ULA;                 
+	wire Cond_Atual;                 
 	
-	wire Branch_Cond;            // Branch & Cond_Atual
+	wire Branch_Cond;            
 
-	// Extração dos campos da instrução (8 bits)
-	wire [2:0] Opcode = 	Instrucao_Lida[7:5];  // 3 bits
-	wire 		  Funct = 	  Instrucao_Lida[0];    // 1 bit
+	// Extração dos campos da instrução 
+	wire [2:0] Opcode = 	Instrucao_Lida[7:5];  
+	wire 		  Funct = 	  Instrucao_Lida[0];    
 	wire [1:0] Reg1 = 	Instrucao_Lida[4:3];  // Endereço de Leitura A (2 bits)
 	wire [1:0] Reg2 = 	Instrucao_Lida[2:1];  // Endereço de Leitura B / Destino (2 bits)
-	wire [4:0] Target = 	Instrucao_Lida[4:0]; //Target (5 bits)
-	wire [2:0] Imm3 = 	Instrucao_Lida[2:0]; // Imediato (2 bits)
+	wire [4:0] Target = 	Instrucao_Lida[4:0];  //Target (5 bits)
+	wire [2:0] Imm3 = 	Instrucao_Lida[2:0];  // Imediato (2 bits)
 
 
 	PC PC(.clk(CLK), .reset(RESET), .novo_PC(novo_PC), .pc_atual(PC_Atual));
 
-	// 2.2 Somador PC + 1 (Sequencial)
+
 	Somador Somador(.d1(PC_Atual), .d2(8'd1), .saida(PC_Somado));
 
-	// 2.3 Memória de Instrução
+
 	Memoria_Instrucao InstrMem(.clk(CLK), .reset(RESET), .endereco(PC_Atual), .instrucao_saida(Instrucao_Lida));
 
-	// 2.4 Unidade de Controle
 	Unidade_Controle UC(
 		.Opcode(Opcode), .Funct(Funct),
 		.RegDst(RegDst), .RegWrite(RegWrite), .MemRead(MemRead), 
@@ -59,7 +56,6 @@ module nRisc(
 		.ULASrc(ULASrc), .Halt(Halt), .ULAOp(ULAOp)
 	);
 
-	// 2.6 Banco de Registradores
 	Banco_Registradores BancoReg(
 		.clk(CLK), .reset(RESET), 
 		.habilita_escrita(RegWrite), 

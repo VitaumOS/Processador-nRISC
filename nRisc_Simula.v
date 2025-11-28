@@ -5,44 +5,32 @@ reg RESET;
 
 integer i;
 
-
-
-// 1. Instância do Processador
-nRisc nRisc( // MÓDULO CORRIGIDO: nRisc
+nRisc nRisc( 
 	.CLK(CLK),
 	.RESET(RESET)
 
 );
 
-
-
-// ----------------------------------------------------------------------
-// Geração de Clock e Inicialização
-// ----------------------------------------------------------------------
-
 initial
 	begin
-		$display("Inicializando simulacao do nRisc Uniciclo de 8 bits...");
-		
-		
-		
-		nRisc.DataMem.memoria[0]=8'b00000101;
-		nRisc.DataMem.memoria[1]=8'b00001000;
-		nRisc.DataMem.memoria[2]=8'b11111111;
-		nRisc.DataMem.memoria[3]=8'b00000001;
-		nRisc.DataMem.memoria[4]=8'b00001010;
+				
+		nRisc.DataMem.memoria[0]=8'b00000101; //5
+		nRisc.DataMem.memoria[1]=8'b00001000; //8
+		nRisc.DataMem.memoria[2]=8'b11111111; //-1
+		nRisc.DataMem.memoria[3]=8'b00000001; //1
+		nRisc.DataMem.memoria[4]=8'b00001010; //10
 
-		nRisc.InstrMem.memoria[0]=8'b10001000;
-		nRisc.InstrMem.memoria[1]=8'b10010001;
-		nRisc.InstrMem.memoria[2]=8'b10011101;
-		nRisc.InstrMem.memoria[3]=8'b01000010;
-		nRisc.InstrMem.memoria[4]=8'b10100001;
-		nRisc.InstrMem.memoria[5]=8'b00100100;
-		nRisc.InstrMem.memoria[6]=8'b01000011;
-		nRisc.InstrMem.memoria[7]=8'b00101100;
-		nRisc.InstrMem.memoria[8]=8'b10101110;
-		nRisc.InstrMem.memoria[9]=8'b11000011;
-		nRisc.InstrMem.memoria[10]=8'b00000000;
+		nRisc.InstrMem.memoria[0]=8'b10001000; //LI R1, 0
+		nRisc.InstrMem.memoria[1]=8'b10010001; //LI R2, 1
+		nRisc.InstrMem.memoria[2]=8'b10011101; //LI R3, 5
+		nRisc.InstrMem.memoria[3]=8'b01000010; //LW R0, R1
+		nRisc.InstrMem.memoria[4]=8'b10100001; //NOT R0, R0
+		nRisc.InstrMem.memoria[5]=8'b00100100; //ADD R0, R2
+		nRisc.InstrMem.memoria[6]=8'b01000011; //SW R0, R1
+		nRisc.InstrMem.memoria[7]=8'b00101100; //ADD R1, R2
+		nRisc.InstrMem.memoria[8]=8'b10101110; //SLT R1, R3
+		nRisc.InstrMem.memoria[9]=8'b11000011; //BEQ 4 - CORRIGIR O OPCODE DO BEQ
+		nRisc.InstrMem.memoria[10]=8'b00000000; //HALT
 		
 		for(i=0; i<=4; i=i+1)
 			$display("Memoria:%d", $signed(nRisc.DataMem.memoria[i]));
@@ -53,7 +41,7 @@ initial
 		RESET = 0;
 	end
 
-// Geração de Clock (Ciclo de 10ns)
+
 initial
 	begin
 		forever begin
@@ -61,11 +49,6 @@ initial
 			CLK = ~CLK;
 		end
 	end
-
-// ----------------------------------------------------------------------
-// Monitoramento e Debug (Executa na borda de subida - posedge CLK)
-// ----------------------------------------------------------------------
-
 
 		 
 always @(posedge CLK) begin
@@ -99,8 +82,6 @@ always @(posedge CLK) begin
 		nRisc.BancoReg.registradores[3]);
 end
 		
-
-
 
 always @(posedge CLK) begin
 
