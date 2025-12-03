@@ -11,7 +11,7 @@ module MUX(
 	always @* begin
 		
 		if (seletor)
-			saida = d1;
+			saida = d1; //o seletor quando ativo sempre seleciona a entrada d1
 		else
 			saida = d2;
 	end

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for nRisc_Simula
-Fri Nov 28 18:10:07 2025
+Mon Dec 01 08:56:02 2025
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,7 +14,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "MUX:Mux_ALUSrc1"
+  9. Port Connectivity Checks: "MUX:Mux_ULASrc1"
  10. Port Connectivity Checks: "Unidade_Controle:UC"
  11. Port Connectivity Checks: "Somador:Somador"
  12. Elapsed Time Per Partition
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 28 18:10:07 2025           ;
+; Analysis & Synthesis Status        ; Successful - Mon Dec 01 08:56:02 2025           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; nRisc_Simula                                    ;
 ; Top-level Entity Name              ; nRisc                                           ;
@@ -230,7 +230,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 +---------------------------------------------+
-; Port Connectivity Checks: "MUX:Mux_ALUSrc1" ;
+; Port Connectivity Checks: "MUX:Mux_ULASrc1" ;
 +------+-------+----------+-------------------+
 ; Port ; Type  ; Severity ; Details           ;
 +------+-------+----------+-------------------+
@@ -272,7 +272,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Nov 28 18:10:06 2025
+    Info: Processing started: Mon Dec 01 08:56:01 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off nRisc_Simula -c nRisc_Simula
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file nrisc_simula.v
@@ -306,7 +306,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file nrisc.v
 Info (12127): Elaborating entity "nRisc" for the top level hierarchy
 Info (12128): Elaborating entity "PC" for hierarchy "PC:PC"
 Info (12128): Elaborating entity "Somador" for hierarchy "Somador:Somador"
-Info (12128): Elaborating entity "Memoria_Instrucao" for hierarchy "Memoria_Instrucao:InstrMem"
+Info (12128): Elaborating entity "Memoria_Instrucao" for hierarchy "Memoria_Instrucao:Mem_Inst"
 Warning (10858): Verilog HDL warning at Memoria_Instrucao.v(7): object memoria used but never assigned
 Warning (12125): Using design file unidade_controle.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Unidade_Controle
@@ -315,15 +315,15 @@ Warning (10270): Verilog HDL Case Statement warning at unidade_controle.v(28): i
 Info (12128): Elaborating entity "Banco_Registradores" for hierarchy "Banco_Registradores:BancoReg"
 Info (12128): Elaborating entity "Extensor_Sinal_5b8" for hierarchy "Extensor_Sinal_5b8:Ext5"
 Info (12128): Elaborating entity "Extensor_Sinal_3b8" for hierarchy "Extensor_Sinal_3b8:Ext3"
-Info (12128): Elaborating entity "MUX" for hierarchy "MUX:Mux_ALUSrc1"
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:Mux_ULASrc1"
 Warning (12125): Using design file ula_controle.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: ULA_Controle
-Info (12128): Elaborating entity "ULA_Controle" for hierarchy "ULA_Controle:ULA_CTRL"
+Info (12128): Elaborating entity "ULA_Controle" for hierarchy "ULA_Controle:ULA_Controle"
 Warning (10270): Verilog HDL Case Statement warning at ula_controle.v(12): incomplete case statement has no default case item
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA1"
-Info (12128): Elaborating entity "Porta_AND" for hierarchy "Porta_AND:AND_Reset_Cond"
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:ULA"
 Info (12128): Elaborating entity "Registrador_COND" for hierarchy "Registrador_COND:Reg_COND"
-Info (12128): Elaborating entity "Memoria_Dados" for hierarchy "Memoria_Dados:DataMem"
+Info (12128): Elaborating entity "Porta_AND" for hierarchy "Porta_AND:AND_Cond"
+Info (12128): Elaborating entity "Memoria_Dados" for hierarchy "Memoria_Dados:Mem_Data"
 Warning (10240): Verilog HDL Always Construct warning at Memoria_Dados.v(22): inferring latch(es) for variable "dado_saida", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "dado_saida[0]" at Memoria_Dados.v(24)
 Info (10041): Inferred latch for "dado_saida[1]" at Memoria_Dados.v(24)
@@ -342,8 +342,8 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 4599 megabytes
-    Info: Processing ended: Fri Nov 28 18:10:07 2025
+    Info: Peak virtual memory: 4594 megabytes
+    Info: Processing ended: Mon Dec 01 08:56:02 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

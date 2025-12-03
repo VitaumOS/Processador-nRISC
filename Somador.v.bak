@@ -1,10 +1,13 @@
 module Somador(
+	
 	input wire [7:0] d1,d2,
+	
 	output reg [7:0] saida
 );
 
 	always @* begin
-		saida = d1+d2; //Ele sera usado apenas para a soma de mais 1 do PC
+	
+		saida = d1+d2;
 	end
 
 endmodule

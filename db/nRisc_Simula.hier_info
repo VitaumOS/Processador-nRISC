@@ -65,7 +65,7 @@ saida[6] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|Memoria_Instrucao:InstrMem
+|nRisc|Memoria_Instrucao:Mem_Inst
 clk => instrucao_saida[0]~reg0.CLK
 clk => instrucao_saida[1]~reg0.CLK
 clk => instrucao_saida[2]~reg0.CLK
@@ -334,7 +334,7 @@ saida[6] <= <GND>
 saida[7] <= <GND>
 
 
-|nRisc|MUX:Mux_ALUSrc1
+|nRisc|MUX:Mux_ULASrc1
 d1[0] => saida.DATAB
 d1[1] => saida.DATAB
 d1[2] => saida.DATAB
@@ -369,7 +369,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|MUX:Mux_ALUSrc2
+|nRisc|MUX:Mux_ULASrc2
 d1[0] => saida.DATAB
 d1[1] => saida.DATAB
 d1[2] => saida.DATAB
@@ -404,112 +404,7 @@ saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|MUX:Mux_RegDst
-d1[0] => saida.DATAB
-d1[1] => saida.DATAB
-d1[2] => saida.DATAB
-d1[3] => saida.DATAB
-d1[4] => saida.DATAB
-d1[5] => saida.DATAB
-d1[6] => saida.DATAB
-d1[7] => saida.DATAB
-d2[0] => saida.DATAA
-d2[1] => saida.DATAA
-d2[2] => saida.DATAA
-d2[3] => saida.DATAA
-d2[4] => saida.DATAA
-d2[5] => saida.DATAA
-d2[6] => saida.DATAA
-d2[7] => saida.DATAA
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|nRisc|MUX:Mux_Branch
-d1[0] => saida.DATAB
-d1[1] => saida.DATAB
-d1[2] => saida.DATAB
-d1[3] => saida.DATAB
-d1[4] => saida.DATAB
-d1[5] => saida.DATAB
-d1[6] => saida.DATAB
-d1[7] => saida.DATAB
-d2[0] => saida.DATAA
-d2[1] => saida.DATAA
-d2[2] => saida.DATAA
-d2[3] => saida.DATAA
-d2[4] => saida.DATAA
-d2[5] => saida.DATAA
-d2[6] => saida.DATAA
-d2[7] => saida.DATAA
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|nRisc|MUX:Mux_Jump
-d1[0] => saida.DATAB
-d1[1] => saida.DATAB
-d1[2] => saida.DATAB
-d1[3] => saida.DATAB
-d1[4] => saida.DATAB
-d1[5] => saida.DATAB
-d1[6] => saida.DATAB
-d1[7] => saida.DATAB
-d2[0] => saida.DATAA
-d2[1] => saida.DATAA
-d2[2] => saida.DATAA
-d2[3] => saida.DATAA
-d2[4] => saida.DATAA
-d2[5] => saida.DATAA
-d2[6] => saida.DATAA
-d2[7] => saida.DATAA
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-seletor => saida.OUTPUTSELECT
-saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|nRisc|ULA_Controle:ULA_CTRL
+|nRisc|ULA_Controle:ULA_Controle
 ULAOp[0] => Equal0.IN3
 ULAOp[0] => Equal1.IN3
 ULAOp[1] => Equal0.IN2
@@ -519,7 +414,7 @@ ULA_Control[0] <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
 ULA_Control[1] <= Equal1.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|ULA:ULA1
+|nRisc|ULA:ULA
 d1[0] => Add0.IN8
 d1[0] => Add1.IN16
 d1[0] => LessThan0.IN8
@@ -605,12 +500,6 @@ Resultado[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 COND <= COND.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|Porta_AND:AND_Reset_Cond
-d1 => saida.IN0
-d2 => saida.IN1
-saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
-
-
 |nRisc|Registrador_COND:Reg_COND
 clk => cond_atual~reg0.CLK
 reset => cond_atual~reg0.ACLR
@@ -619,7 +508,13 @@ reset_cond => cond_atual.OUTPUTSELECT
 cond_atual <= cond_atual~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nRisc|Memoria_Dados:DataMem
+|nRisc|Porta_AND:AND_Cond
+d1 => saida.IN0
+d2 => saida.IN1
+saida <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nRisc|Memoria_Dados:Mem_Data
 clk => memoria.we_a.CLK
 clk => memoria.waddr_a[7].CLK
 clk => memoria.waddr_a[6].CLK
@@ -704,5 +599,110 @@ dado_saida[4] <= dado_saida[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
 dado_saida[5] <= dado_saida[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
 dado_saida[6] <= dado_saida[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
 dado_saida[7] <= dado_saida[7]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nRisc|MUX:Mux_Branch
+d1[0] => saida.DATAB
+d1[1] => saida.DATAB
+d1[2] => saida.DATAB
+d1[3] => saida.DATAB
+d1[4] => saida.DATAB
+d1[5] => saida.DATAB
+d1[6] => saida.DATAB
+d1[7] => saida.DATAB
+d2[0] => saida.DATAA
+d2[1] => saida.DATAA
+d2[2] => saida.DATAA
+d2[3] => saida.DATAA
+d2[4] => saida.DATAA
+d2[5] => saida.DATAA
+d2[6] => saida.DATAA
+d2[7] => saida.DATAA
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nRisc|MUX:Mux_Jump
+d1[0] => saida.DATAB
+d1[1] => saida.DATAB
+d1[2] => saida.DATAB
+d1[3] => saida.DATAB
+d1[4] => saida.DATAB
+d1[5] => saida.DATAB
+d1[6] => saida.DATAB
+d1[7] => saida.DATAB
+d2[0] => saida.DATAA
+d2[1] => saida.DATAA
+d2[2] => saida.DATAA
+d2[3] => saida.DATAA
+d2[4] => saida.DATAA
+d2[5] => saida.DATAA
+d2[6] => saida.DATAA
+d2[7] => saida.DATAA
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|nRisc|MUX:Mux_RegDst
+d1[0] => saida.DATAB
+d1[1] => saida.DATAB
+d1[2] => saida.DATAB
+d1[3] => saida.DATAB
+d1[4] => saida.DATAB
+d1[5] => saida.DATAB
+d1[6] => saida.DATAB
+d1[7] => saida.DATAB
+d2[0] => saida.DATAA
+d2[1] => saida.DATAA
+d2[2] => saida.DATAA
+d2[3] => saida.DATAA
+d2[4] => saida.DATAA
+d2[5] => saida.DATAA
+d2[6] => saida.DATAA
+d2[7] => saida.DATAA
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+seletor => saida.OUTPUTSELECT
+saida[0] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida.DB_MAX_OUTPUT_PORT_TYPE
 
 

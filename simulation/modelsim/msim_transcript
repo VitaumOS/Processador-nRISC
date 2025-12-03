@@ -126,7 +126,6 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Inicializando simulacao do nRisc Uniciclo de 8 bits...
 # Memoria:   5
 # Memoria:   8
 # Memoria:  -1
@@ -215,8 +214,8 @@
 # Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
 # 
 # Tempo: 95ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11000011
-# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# PC=  9 | Instrucao=11100011
+# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
 # Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
 # ULA: In1=251 In2=  1 | Out=252 | COND=0
 # Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
@@ -278,8 +277,8 @@
 # Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
 # 
 # Tempo: 165ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11000011
-# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# PC=  9 | Instrucao=11100011
+# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
 # Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
 # ULA: In1=248 In2=  2 | Out=250 | COND=0
 # Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
@@ -341,8 +340,8 @@
 # Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
 # 
 # Tempo: 235ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11000011
-# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# PC=  9 | Instrucao=11100011
+# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
 # Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
 # ULA: In1=  1 In2=  3 | Out=  4 | COND=0
 # Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
@@ -404,8 +403,8 @@
 # Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
 # 
 # Tempo: 305ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11000011
-# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# PC=  9 | Instrucao=11100011
+# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
 # Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
 # ULA: In1=255 In2=  4 | Out=  3 | COND=0
 # Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
@@ -467,8 +466,8 @@
 # Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
 # 
 # Tempo: 375ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11000011
-# Decodificacao: Opcode=110 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
+# PC=  9 | Instrucao=11100011
+# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
 # Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
 # ULA: In1=246 In2=  5 | Out=251 | COND=0
 # Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
@@ -488,10 +487,10 @@
 # Memoria:   1
 # Memoria:  -1
 # Memoria: -10
-# ** Note: $finish    : C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v(110)
+# ** Note: $finish    : C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v(91)
 #    Time: 385 ps  Iteration: 1  Instance: /nRisc_Simula
 # 1
-# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 110
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 91
 # Simulation Breakpoint: 1
-# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 110
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 91
 # MACRO ./nRisc_Simula_run_msim_rtl_verilog.do PAUSED at line 30

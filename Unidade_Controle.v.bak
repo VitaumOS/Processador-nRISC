@@ -77,7 +77,7 @@ module Unidade_Controle (
             end
 				
 				
-            3'b111: begin // 111: BEQ 
+            3'b110: begin // 110: BEQ 
                 Branch = 1'b1;
                 ULAOp = 2'b11; 
             end
