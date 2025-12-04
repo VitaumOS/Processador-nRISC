@@ -116,8 +116,8 @@
 # Loading work.MUX
 # Loading work.ULA_Controle
 # Loading work.ULA
-# Loading work.Porta_AND
 # Loading work.Registrador_COND
+# Loading work.Porta_AND
 # Loading work.Memoria_Dados
 # 
 # add wave *
@@ -126,371 +126,480 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Memoria:   5
-# Memoria:   8
-# Memoria:  -1
-# Memoria:   1
-# Memoria:  10
+# Memoria:   5,    8,   -1,    1,   10
 # 
-# Tempo: 5ns | Clock = 1 | Reset = 0
-# PC=  0 | Instrucao=10001000
-# Decodificacao: Opcode=100 | Funct=0 | R1 = 1 | R2 = 0 | Imm3=0 | Target= 8
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
-# ULA: In1=  0 In2=  0 | Out=  0 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000000
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 5 | Clock = 1  Reset = 0
+# PC =   0 | Instrucao = 10001000
+# Decodificacao da instrucao: Opcode = 100 Funct = 0 R1 = 1 R2 = 0 Imm3 = 0 Target =  8
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 1 Halt = 0 ULAOP = 10 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000000 d2 =00000000 | Resultado = 00000000 | COND = 0
+# Memoria de Dados (Interna): Endereco =   x | DadoEscrito = xxxxxxxx | DadoLido = 00000000
+# Saida do MUX RegDst: 00000000
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = xxxxxxxx | R3 = xxxxxxxx
+# Novo PC:   1
 # 
-# Tempo: 15ns | Clock = 1 | Reset = 0
-# PC=  1 | Instrucao=10010001
-# Decodificacao: Opcode=100 | Funct=1 | R1 = 2 | R2 = 0 | Imm3=1 | Target=17
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
-# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
-# Mem Dados (Interna): Endereco=10 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 15 | Clock = 1  Reset = 0
+# PC =   1 | Instrucao = 10010001
+# Decodificacao da instrucao: Opcode = 100 Funct = 1 R1 = 2 R2 = 0 Imm3 = 1 Target = 17
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 1 Halt = 0 ULAOP = 10 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000000 d2 =00000001 | Resultado = 00000001 | COND = 0
+# Memoria de Dados (Interna): Endereco =   x | DadoEscrito = xxxxxxxx | DadoLido = 00000000
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = 00000001 | R3 = xxxxxxxx
+# Novo PC:   2
 # 
-# Tempo: 25ns | Clock = 1 | Reset = 0
-# PC=  2 | Instrucao=10011101
-# Decodificacao: Opcode=100 | Funct=1 | R1 = 3 | R2 = 2 | Imm3=5 | Target=29
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=1
-# ULA: In1=  0 In2=  5 | Out=  5 | COND=0
-# Mem Dados (Interna): Endereco=11 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 25 | Clock = 1  Reset = 0
+# PC =   2 | Instrucao = 10011101
+# Decodificacao da instrucao: Opcode = 100 Funct = 1 R1 = 3 R2 = 2 Imm3 = 5 Target = 29
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 1 Halt = 0 ULAOP = 10 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000000 d2 =00000101 | Resultado = 00000101 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = xxxxxxxx | DadoLido = 00000000
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = xxxxxxxx | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   3
 # 
-# Tempo: 35ns | Clock = 1 | Reset = 0
-# PC=  3 | Instrucao=01000010
-# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
-# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  x In2=  0 | Out=  x | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 35 | Clock = 1  Reset = 0
+# PC =   3 | Instrucao = 01000010
+# Decodificacao da instrucao: Opcode = 010 Funct = 0 R1 = 0 R2 = 1 Imm3 = 2 Target =  2
+# Unidade de Controle: RegDst = 0 RegWrite = 1 MemRead = 1 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =xxxxxxxx d2 =00000000 | Resultado = xxxxxxxx | COND = 0
+# Memoria de Dados (Interna): Endereco =   0 | DadoEscrito = xxxxxxxx | DadoLido = 00000101
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000101 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   4
 # 
-# Tempo: 45ns | Clock = 1 | Reset = 0
-# PC=  4 | Instrucao=10100001
-# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  5 In2=  5 | Out=250 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111010
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 45 | Clock = 1  Reset = 0
+# PC =   4 | Instrucao = 10100001
+# Decodificacao da instrucao: Opcode = 101 Funct = 1 R1 = 0 R2 = 0 Imm3 = 1 Target =  1
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 11
+# ULA: d1 =00000101 d2 =00000101 | Resultado = 11111010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000101 | DadoLido = 00000101
+# Saida do MUX RegDst: 11111010
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111010 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   5
 # 
-# Tempo: 55ns | Clock = 1 | Reset = 0
-# PC=  5 | Instrucao=00100100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=250 In2=  1 | Out=251 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111011
-# Banco Memoria: Mem1 = 00000101(  5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 55 | Clock = 1  Reset = 0
+# PC =   5 | Instrucao = 00100100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 0 R2 = 2 Imm3 = 4 Target =  4
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111010 d2 =00000001 | Resultado = 11111011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11111010 | DadoLido = 00000101
+# Saida do MUX RegDst: 11111011
+# Valores da Memoria de Dados: Mem0 = 00000101(  5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111011 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   6
 # 
-# Tempo: 65ns | Clock = 1 | Reset = 0
-# PC=  6 | Instrucao=01000011
-# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=251 In2=  0 | Out=251 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 65 | Clock = 1  Reset = 0
+# PC =   6 | Instrucao = 01000011
+# Decodificacao da instrucao: Opcode = 010 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 1 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111011 d2 =00000000 | Resultado = 11111011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   0 | DadoEscrito = 11111011 | DadoLido = 00000101
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111011 | R1 = 00000000 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   7
 # 
-# Tempo: 75ns | Clock = 1 | Reset = 0
-# PC=  7 | Instrucao=00101100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 75 | Clock = 1  Reset = 0
+# PC =   7 | Instrucao = 00101100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 1 R2 = 2 Imm3 = 4 Target = 12
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000000 d2 =00000001 | Resultado = 00000001 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000000 | DadoLido = 00000101
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   8
 # 
-# Tempo: 85ns | Clock = 1 | Reset = 0
-# PC=  8 | Instrucao=10101110
-# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  5 | Out=  0 | COND=1
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 85 | Clock = 1  Reset = 0
+# PC =   8 | Instrucao = 10101110
+# Decodificacao da instrucao: Opcode = 101 Funct = 0 R1 = 1 R2 = 3 Imm3 = 6 Target = 14
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 10
+# ULA: d1 =00000001 d2 =00000101 | Resultado = 00000000 | COND = 1
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000001 | DadoLido = 00000101
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   9
 # 
-# Tempo: 95ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11100011
-# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
-# ULA: In1=251 In2=  1 | Out=252 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 95 | Clock = 1  Reset = 0
+# PC =   9 | Instrucao = 11100011
+# Decodificacao da instrucao: Opcode = 111 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 1 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111011 d2 =00000001 | Resultado = 11111100 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11111011 | DadoLido = 00000101
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111011 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   3
 # 
-# Tempo: 105ns | Clock = 1 | Reset = 0
-# PC=  3 | Instrucao=01000010
-# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
-# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=251 In2=  1 | Out=252 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 105 | Clock = 1  Reset = 0
+# PC =   3 | Instrucao = 01000010
+# Decodificacao da instrucao: Opcode = 010 Funct = 0 R1 = 0 R2 = 1 Imm3 = 2 Target =  2
+# Unidade de Controle: RegDst = 0 RegWrite = 1 MemRead = 1 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111011 d2 =00000001 | Resultado = 11111100 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11111011 | DadoLido = 00001000
+# Saida do MUX RegDst: 00001000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00001000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   4
 # 
-# Tempo: 115ns | Clock = 1 | Reset = 0
-# PC=  4 | Instrucao=10100001
-# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  8 In2=  8 | Out=247 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11110111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 115 | Clock = 1  Reset = 0
+# PC =   4 | Instrucao = 10100001
+# Decodificacao da instrucao: Opcode = 101 Funct = 1 R1 = 0 R2 = 0 Imm3 = 1 Target =  1
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 11
+# ULA: d1 =00001000 d2 =00001000 | Resultado = 11110111 | COND = 0
+# Memoria de Dados (Interna): Endereco =   8 | DadoEscrito = 00001000 | DadoLido = 00001000
+# Saida do MUX RegDst: 11110111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11110111 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   5
 # 
-# Tempo: 125ns | Clock = 1 | Reset = 0
-# PC=  5 | Instrucao=00100100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=247 In2=  1 | Out=248 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 00001000(  8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 125 | Clock = 1  Reset = 0
+# PC =   5 | Instrucao = 00100100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 0 R2 = 2 Imm3 = 4 Target =  4
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11110111 d2 =00000001 | Resultado = 11111000 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11110111 | DadoLido = 00001000
+# Saida do MUX RegDst: 11111000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 00001000(  8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   6
 # 
-# Tempo: 135ns | Clock = 1 | Reset = 0
-# PC=  6 | Instrucao=01000011
-# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=248 In2=  1 | Out=249 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 135 | Clock = 1  Reset = 0
+# PC =   6 | Instrucao = 01000011
+# Decodificacao da instrucao: Opcode = 010 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 1 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111000 d2 =00000001 | Resultado = 11111001 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11111000 | DadoLido = 00001000
+# Saida do MUX RegDst: 00001000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111000 | R1 = 00000001 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   7
 # 
-# Tempo: 145ns | Clock = 1 | Reset = 0
-# PC=  7 | Instrucao=00101100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  1 | Out=  2 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 145 | Clock = 1  Reset = 0
+# PC =   7 | Instrucao = 00101100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 1 R2 = 2 Imm3 = 4 Target = 12
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000001 d2 =00000001 | Resultado = 00000010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000001 | DadoLido = 00001000
+# Saida do MUX RegDst: 00000010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   8
 # 
-# Tempo: 155ns | Clock = 1 | Reset = 0
-# PC=  8 | Instrucao=10101110
-# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  2 In2=  5 | Out=  0 | COND=1
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00001000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 155 | Clock = 1  Reset = 0
+# PC =   8 | Instrucao = 10101110
+# Decodificacao da instrucao: Opcode = 101 Funct = 0 R1 = 1 R2 = 3 Imm3 = 6 Target = 14
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 10
+# ULA: d1 =00000010 d2 =00000101 | Resultado = 00000000 | COND = 1
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000010 | DadoLido = 00001000
+# Saida do MUX RegDst: 00001000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   9
 # 
-# Tempo: 165ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11100011
-# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
-# ULA: In1=248 In2=  2 | Out=250 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 165 | Clock = 1  Reset = 0
+# PC =   9 | Instrucao = 11100011
+# Decodificacao da instrucao: Opcode = 111 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 1 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111000 d2 =00000010 | Resultado = 11111010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   2 | DadoEscrito = 11111000 | DadoLido = 00001000
+# Saida do MUX RegDst: 00001000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   3
 # 
-# Tempo: 175ns | Clock = 1 | Reset = 0
-# PC=  3 | Instrucao=01000010
-# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
-# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=248 In2=  2 | Out=250 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 175 | Clock = 1  Reset = 0
+# PC =   3 | Instrucao = 01000010
+# Decodificacao da instrucao: Opcode = 010 Funct = 0 R1 = 0 R2 = 1 Imm3 = 2 Target =  2
+# Unidade de Controle: RegDst = 0 RegWrite = 1 MemRead = 1 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111000 d2 =00000010 | Resultado = 11111010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   2 | DadoEscrito = 11111000 | DadoLido = 11111111
+# Saida do MUX RegDst: 11111111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   4
 # 
-# Tempo: 185ns | Clock = 1 | Reset = 0
-# PC=  4 | Instrucao=10100001
-# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=255 In2=255 | Out=  0 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000000
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 185 | Clock = 1  Reset = 0
+# PC =   4 | Instrucao = 10100001
+# Decodificacao da instrucao: Opcode = 101 Funct = 1 R1 = 0 R2 = 0 Imm3 = 1 Target =  1
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 11
+# ULA: d1 =11111111 d2 =11111111 | Resultado = 00000000 | COND = 0
+# Memoria de Dados (Interna): Endereco = 255 | DadoEscrito = 11111111 | DadoLido = 11111111
+# Saida do MUX RegDst: 00000000
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000000 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   5
 # 
-# Tempo: 195ns | Clock = 1 | Reset = 0
-# PC=  5 | Instrucao=00100100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  0 In2=  1 | Out=  1 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 11111111( -1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 195 | Clock = 1  Reset = 0
+# PC =   5 | Instrucao = 00100100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 0 R2 = 2 Imm3 = 4 Target =  4
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000000 d2 =00000001 | Resultado = 00000001 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000000 | DadoLido = 11111111
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 11111111( -1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   6
 # 
-# Tempo: 205ns | Clock = 1 | Reset = 0
-# PC=  6 | Instrucao=01000011
-# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  2 | Out=  3 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 205 | Clock = 1  Reset = 0
+# PC =   6 | Instrucao = 01000011
+# Decodificacao da instrucao: Opcode = 010 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 1 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000001 d2 =00000010 | Resultado = 00000011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   2 | DadoEscrito = 00000001 | DadoLido = 11111111
+# Saida do MUX RegDst: 11111111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000010 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   7
 # 
-# Tempo: 215ns | Clock = 1 | Reset = 0
-# PC=  7 | Instrucao=00101100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  2 In2=  1 | Out=  3 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000011
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 215 | Clock = 1  Reset = 0
+# PC =   7 | Instrucao = 00101100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 1 R2 = 2 Imm3 = 4 Target = 12
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000010 d2 =00000001 | Resultado = 00000011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000010 | DadoLido = 11111111
+# Saida do MUX RegDst: 00000011
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   8
 # 
-# Tempo: 225ns | Clock = 1 | Reset = 0
-# PC=  8 | Instrucao=10101110
-# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  3 In2=  5 | Out=  0 | COND=1
-# Mem Dados (Interna): Endereco=01 DadoEscrito=11111111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 225 | Clock = 1  Reset = 0
+# PC =   8 | Instrucao = 10101110
+# Decodificacao da instrucao: Opcode = 101 Funct = 0 R1 = 1 R2 = 3 Imm3 = 6 Target = 14
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 10
+# ULA: d1 =00000011 d2 =00000101 | Resultado = 00000000 | COND = 1
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000011 | DadoLido = 11111111
+# Saida do MUX RegDst: 11111111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   9
 # 
-# Tempo: 235ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11100011
-# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  3 | Out=  4 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 235 | Clock = 1  Reset = 0
+# PC =   9 | Instrucao = 11100011
+# Decodificacao da instrucao: Opcode = 111 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 1 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000001 d2 =00000011 | Resultado = 00000100 | COND = 0
+# Memoria de Dados (Interna): Endereco =   3 | DadoEscrito = 00000001 | DadoLido = 11111111
+# Saida do MUX RegDst: 11111111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   3
 # 
-# Tempo: 245ns | Clock = 1 | Reset = 0
-# PC=  3 | Instrucao=01000010
-# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
-# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  3 | Out=  4 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 245 | Clock = 1  Reset = 0
+# PC =   3 | Instrucao = 01000010
+# Decodificacao da instrucao: Opcode = 010 Funct = 0 R1 = 0 R2 = 1 Imm3 = 2 Target =  2
+# Unidade de Controle: RegDst = 0 RegWrite = 1 MemRead = 1 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000001 d2 =00000011 | Resultado = 00000100 | COND = 0
+# Memoria de Dados (Interna): Endereco =   3 | DadoEscrito = 00000001 | DadoLido = 00000001
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00000001 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   4
 # 
-# Tempo: 255ns | Clock = 1 | Reset = 0
-# PC=  4 | Instrucao=10100001
-# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  1 In2=  1 | Out=254 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111110
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 255 | Clock = 1  Reset = 0
+# PC =   4 | Instrucao = 10100001
+# Decodificacao da instrucao: Opcode = 101 Funct = 1 R1 = 0 R2 = 0 Imm3 = 1 Target =  1
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 11
+# ULA: d1 =00000001 d2 =00000001 | Resultado = 11111110 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000001 | DadoLido = 00000001
+# Saida do MUX RegDst: 11111110
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111110 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   5
 # 
-# Tempo: 265ns | Clock = 1 | Reset = 0
-# PC=  5 | Instrucao=00100100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=254 In2=  1 | Out=255 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11111111
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 00000001(  1) | Mem5 = 00001010( 10)
+# Tempo = 265 | Clock = 1  Reset = 0
+# PC =   5 | Instrucao = 00100100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 0 R2 = 2 Imm3 = 4 Target =  4
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111110 d2 =00000001 | Resultado = 11111111 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11111110 | DadoLido = 00000001
+# Saida do MUX RegDst: 11111111
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 00000001(  1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   6
 # 
-# Tempo: 275ns | Clock = 1 | Reset = 0
-# PC=  6 | Instrucao=01000011
-# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=255 In2=  3 | Out=  2 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 275 | Clock = 1  Reset = 0
+# PC =   6 | Instrucao = 01000011
+# Decodificacao da instrucao: Opcode = 010 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 1 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111111 d2 =00000011 | Resultado = 00000010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   3 | DadoEscrito = 11111111 | DadoLido = 00000001
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000011 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   7
 # 
-# Tempo: 285ns | Clock = 1 | Reset = 0
-# PC=  7 | Instrucao=00101100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  3 In2=  1 | Out=  4 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000100
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 285 | Clock = 1  Reset = 0
+# PC =   7 | Instrucao = 00101100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 1 R2 = 2 Imm3 = 4 Target = 12
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000011 d2 =00000001 | Resultado = 00000100 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000011 | DadoLido = 00000001
+# Saida do MUX RegDst: 00000100
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   8
 # 
-# Tempo: 295ns | Clock = 1 | Reset = 0
-# PC=  8 | Instrucao=10101110
-# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  4 In2=  5 | Out=  0 | COND=1
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 295 | Clock = 1  Reset = 0
+# PC =   8 | Instrucao = 10101110
+# Decodificacao da instrucao: Opcode = 101 Funct = 0 R1 = 1 R2 = 3 Imm3 = 6 Target = 14
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 10
+# ULA: d1 =00000100 d2 =00000101 | Resultado = 00000000 | COND = 1
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000100 | DadoLido = 00000001
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   9
 # 
-# Tempo: 305ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11100011
-# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
-# ULA: In1=255 In2=  4 | Out=  3 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00000001
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 305 | Clock = 1  Reset = 0
+# PC =   9 | Instrucao = 11100011
+# Decodificacao da instrucao: Opcode = 111 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 1 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111111 d2 =00000100 | Resultado = 00000011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   4 | DadoEscrito = 11111111 | DadoLido = 00000001
+# Saida do MUX RegDst: 00000001
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11111111 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   3
 # 
-# Tempo: 315ns | Clock = 1 | Reset = 0
-# PC=  3 | Instrucao=01000010
-# Decodificacao: Opcode=010 | Funct=0 | R1 = 0 | R2 = 1 | Imm3=2 | Target= 2
-# Controle: RegWrite=1 MemRead=1 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=255 In2=  4 | Out=  3 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 315 | Clock = 1  Reset = 0
+# PC =   3 | Instrucao = 01000010
+# Decodificacao da instrucao: Opcode = 010 Funct = 0 R1 = 0 R2 = 1 Imm3 = 2 Target =  2
+# Unidade de Controle: RegDst = 0 RegWrite = 1 MemRead = 1 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11111111 d2 =00000100 | Resultado = 00000011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   4 | DadoEscrito = 11111111 | DadoLido = 00001010
+# Saida do MUX RegDst: 00001010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 00001010 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   4
 # 
-# Tempo: 325ns | Clock = 1 | Reset = 0
-# PC=  4 | Instrucao=10100001
-# Decodificacao: Opcode=101 | Funct=1 | R1 = 0 | R2 = 0 | Imm3=1 | Target= 1
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1= 10 In2= 10 | Out=245 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11110101
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 325 | Clock = 1  Reset = 0
+# PC =   4 | Instrucao = 10100001
+# Decodificacao da instrucao: Opcode = 101 Funct = 1 R1 = 0 R2 = 0 Imm3 = 1 Target =  1
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 11
+# ULA: d1 =00001010 d2 =00001010 | Resultado = 11110101 | COND = 0
+# Memoria de Dados (Interna): Endereco =  10 | DadoEscrito = 00001010 | DadoLido = 00001010
+# Saida do MUX RegDst: 11110101
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11110101 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   5
 # 
-# Tempo: 335ns | Clock = 1 | Reset = 0
-# PC=  5 | Instrucao=00100100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 0 | R2 = 2 | Imm3=4 | Target= 4
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=245 In2=  1 | Out=246 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=11110110
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 00001010( 10)
+# Tempo = 335 | Clock = 1  Reset = 0
+# PC =   5 | Instrucao = 00100100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 0 R2 = 2 Imm3 = 4 Target =  4
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11110101 d2 =00000001 | Resultado = 11110110 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 11110101 | DadoLido = 00001010
+# Saida do MUX RegDst: 11110110
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 00001010( 10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   6
 # 
-# Tempo: 345ns | Clock = 1 | Reset = 0
-# PC=  6 | Instrucao=01000011
-# Decodificacao: Opcode=010 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=1 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=246 In2=  4 | Out=250 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Tempo = 345 | Clock = 1  Reset = 0
+# PC =   6 | Instrucao = 01000011
+# Decodificacao da instrucao: Opcode = 010 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 1 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11110110 d2 =00000100 | Resultado = 11111010 | COND = 0
+# Memoria de Dados (Interna): Endereco =   4 | DadoEscrito = 11110110 | DadoLido = 00001010
+# Saida do MUX RegDst: 00001010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 11110110(-10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000100 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   7
 # 
-# Tempo: 355ns | Clock = 1 | Reset = 0
-# PC=  7 | Instrucao=00101100
-# Decodificacao: Opcode=001 | Funct=0 | R1 = 1 | R2 = 2 | Imm3=4 | Target=12
-# Controle: RegWrite=1 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  4 In2=  1 | Out=  5 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00000101
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Tempo = 355 | Clock = 1  Reset = 0
+# PC =   7 | Instrucao = 00101100
+# Decodificacao da instrucao: Opcode = 001 Funct = 0 R1 = 1 R2 = 2 Imm3 = 4 Target = 12
+# Unidade de Controle: RegDst = 1 RegWrite = 1 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 00 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =00000100 d2 =00000001 | Resultado = 00000101 | COND = 0
+# Memoria de Dados (Interna): Endereco =   1 | DadoEscrito = 00000100 | DadoLido = 00001010
+# Saida do MUX RegDst: 00000101
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 11110110(-10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   8
 # 
-# Tempo: 365ns | Clock = 1 | Reset = 0
-# PC=  8 | Instrucao=10101110
-# Decodificacao: Opcode=101 | Funct=0 | R1 = 1 | R2 = 3 | Imm3=6 | Target=14
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=  5 In2=  5 | Out=  0 | COND=0
-# Mem Dados (Interna): Endereco=01 DadoEscrito=00001010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Tempo = 365 | Clock = 1  Reset = 0
+# PC =   8 | Instrucao = 10101110
+# Decodificacao da instrucao: Opcode = 101 Funct = 0 R1 = 1 R2 = 3 Imm3 = 6 Target = 14
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 01 
+# Unidade de Controle ULA: ULAControl = 10
+# ULA: d1 =00000101 d2 =00000101 | Resultado = 00000000 | COND = 0
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 00000101 | DadoLido = 00001010
+# Saida do MUX RegDst: 00001010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 11110110(-10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# Novo PC:   9
 # 
-# Tempo: 375ns | Clock = 1 | Reset = 0
-# PC=  9 | Instrucao=11100011
-# Decodificacao: Opcode=111 | Funct=1 | R1 = 0 | R2 = 1 | Imm3=3 | Target= 3
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=1 Jump=0 ULASrc=0
-# ULA: In1=246 In2=  5 | Out=251 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Tempo = 375 | Clock = 1  Reset = 0
+# PC =   9 | Instrucao = 11100011
+# Decodificacao da instrucao: Opcode = 111 Funct = 1 R1 = 0 R2 = 1 Imm3 = 3 Target =  3
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 1 Jump = 0 ULASrc = 0 Halt = 0 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11110110 d2 =00000101 | Resultado = 11111011 | COND = 0
+# Memoria de Dados (Interna): Endereco =   5 | DadoEscrito = 11110110 | DadoLido = 00001010
+# Saida do MUX RegDst: 00001010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 11110110(-10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
+# Novo PC:  10
 # 
-# Tempo: 385ns | Clock = 1 | Reset = 0
-# PC= 10 | Instrucao=00000000
-# Decodificacao: Opcode=000 | Funct=0 | R1 = 0 | R2 = 0 | Imm3=0 | Target= 0
-# Controle: RegWrite=0 MemRead=0 MemWrite=0 Branch=0 Jump=0 ULASrc=0
-# ULA: In1=246 In2=246 | Out=236 | COND=0
-# Mem Dados (Interna): Endereco=00 DadoEscrito=00001010
-# Banco Memoria: Mem1 = 11111011( -5)| Mem2 = 11111000( -8) | Mem3 = 00000001(  1) | Mem4 = 11111111( -1) | Mem5 = 11110110(-10)
+# Tempo = 385 | Clock = 1  Reset = 0
+# PC =  10 | Instrucao = 00000000
+# Decodificacao da instrucao: Opcode = 000 Funct = 0 R1 = 0 R2 = 0 Imm3 = 0 Target =  0
+# Unidade de Controle: RegDst = 0 RegWrite = 0 MemRead = 0 MemWrite = 0 Branch = 0 Jump = 0 ULASrc = 0 Halt = 1 ULAOP = 11 
+# Unidade de Controle ULA: ULAControl = 00
+# ULA: d1 =11110110 d2 =11110110 | Resultado = 11101100 | COND = 0
+# Memoria de Dados (Interna): Endereco = 246 | DadoEscrito = 11110110 | DadoLido = 00001010
+# Saida do MUX RegDst: 00001010
+# Valores da Memoria de Dados: Mem0 = 11111011( -5)| Mem1 = 11111000( -8) | Mem2 = 00000001(  1) | Mem3 = 11111111( -1) | Mem4 = 11110110(-10)
 # Banco Registradores: R0 = 11110110 | R1 = 00000101 | R2 = 00000001 | R3 = 00000101
-# Memoria:  -5
-# Memoria:  -8
-# Memoria:   1
-# Memoria:  -1
-# Memoria: -10
-# ** Note: $finish    : C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v(91)
+# Novo PC:  11
+# Memoria:  -5,   -8,    1,   -1,  -10
+# ** Note: $finish    : C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v(99)
 #    Time: 385 ps  Iteration: 1  Instance: /nRisc_Simula
 # 1
-# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 91
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 99
 # Simulation Breakpoint: 1
-# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 91
+# Break in Module nRisc_Simula at C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v line 99
 # MACRO ./nRisc_Simula_run_msim_rtl_verilog.do PAUSED at line 30

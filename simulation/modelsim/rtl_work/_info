@@ -20,7 +20,7 @@ Z4 !s92 -vlog01compat -work work {+incdir+C:/Users/vitor/Documents/CEFET/Periodo
 !i10b 1
 !s100 gJCRiBG4VBKkK2>664zhD0
 !s85 0
-!s108 1764588395.389000
+!s108 1764863040.923000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Banco_Registradores.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Banco_Registradores.v|
 !s101 -O0
@@ -41,7 +41,7 @@ n@extensor_@sinal_3b8
 !i10b 1
 !s100 cBWnU]]SP>5V:WB2?6zKB2
 !s85 0
-!s108 1764588395.825000
+!s108 1764863041.350000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_3b8.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_3b8.v|
 !s101 -O0
@@ -62,7 +62,7 @@ n@extensor_@sinal_5b8
 !i10b 1
 !s100 9T_4e2[DfYRJiFSoEZVF>2
 !s85 0
-!s108 1764588395.889000
+!s108 1764863041.418000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_5b8.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Extensor_Sinal_5b8.v|
 !s101 -O0
@@ -83,7 +83,7 @@ n@memoria_@dados
 !i10b 1
 !s100 3hL>_3Sf3ZU?felCQ`BTe0
 !s85 0
-!s108 1764588395.442000
+!s108 1764863040.977000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Dados.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Dados.v|
 !s101 -O0
@@ -104,7 +104,7 @@ n@memoria_@instrucao
 !i10b 1
 !s100 QmaLoAa>4RbnROIcU4Z[o2
 !s85 0
-!s108 1764588395.589000
+!s108 1764863041.096000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Instrucao.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Memoria_Instrucao.v|
 !s101 -O0
@@ -125,15 +125,15 @@ n@m@u@x
 !i10b 1
 !s100 FjGaTPFIIBYZnkZW^MeJ`3
 !s85 0
-!s108 1764588395.766000
+!s108 1764863041.282000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/MUX.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/MUX.v|
 !s101 -O0
 vnRisc
-II@bnH9li5EmZPlk[^mIC60
+IZk@F86d8og7FhoPaPcfzK2
 Vj4LB3gROSdc7m=iYka<6Q2
 R1
-w1764581964
+w1764590055
 8C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v
 FC:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v
 L0 1
@@ -144,19 +144,19 @@ R3
 R4
 nn@risc
 !i10b 1
-!s100 RNDE=kf7hS:KdiG35?K6Y0
+!s100 S=2GmDc4j[30L1LSe==C>1
 !s85 0
-!s108 1764588396.094000
+!s108 1764863041.625000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc.v|
 !s101 -O0
 vnRisc_Simula
 !i10b 1
-!s100 X>29BRUmhT:jE?Y:S8ZSk3
-I09h4aQEBY:a@OFOa8?hk11
+!s100 Q>ca6hS_W9<>Jg^?l3h>Q2
+IC2AfCdFcamNE29P]P?hz[3
 VmGeYTkH9U9hjgX]zFEV;52
 R1
-w1764588343
+w1764862493
 8C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v
 FC:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v
 L0 1
@@ -164,7 +164,7 @@ R2
 r1
 !s85 0
 31
-!s108 1764588396.303000
+!s108 1764863041.826000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/nRisc_Simula.v|
 !s101 -O0
@@ -188,7 +188,7 @@ n@p@c
 !i10b 1
 !s100 WEec3RK8T9Y]PN5R:]hjW2
 !s85 0
-!s108 1764588395.532000
+!s108 1764863041.037000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/PC.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/PC.v|
 !s101 -O0
@@ -209,7 +209,7 @@ n@porta_@a@n@d
 !i10b 1
 !s100 no?XK3LlFLQT_]FFNcYJT3
 !s85 0
-!s108 1764588396.027000
+!s108 1764863041.553000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Porta_AND.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Porta_AND.v|
 !s101 -O0
@@ -230,7 +230,7 @@ n@registrador_@c@o@n@d
 !i10b 1
 !s100 SVCYPL`=DBJD<WQIB^0SW3
 !s85 0
-!s108 1764588395.648000
+!s108 1764863041.156000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Registrador_COND.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Registrador_COND.v|
 !s101 -O0
@@ -251,7 +251,7 @@ n@somador
 !i10b 1
 !s100 zJaXV<;fdd41Xfn7@Y:@K2
 !s85 0
-!s108 1764588395.961000
+!s108 1764863041.486000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Somador.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/Somador.v|
 !s101 -O0
@@ -272,7 +272,7 @@ n@u@l@a
 !i10b 1
 !s100 FajX2[9g`H2Va0E<86CK:2
 !s85 0
-!s108 1764588395.708000
+!s108 1764863041.216000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ULA.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ULA.v|
 !s101 -O0
@@ -293,7 +293,7 @@ n@u@l@a_@controle
 !i10b 1
 !s100 e0gznZPiIFgMETJX8nCD:3
 !s85 0
-!s108 1764588396.230000
+!s108 1764863041.757000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ula_controle.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/ula_controle.v|
 !s101 -O0
@@ -314,7 +314,7 @@ n@unidade_@controle
 !i10b 1
 !s100 ^S3BfNoJoAODK2V[c<m;Z2
 !s85 0
-!s108 1764588396.165000
+!s108 1764863041.691000
 !s107 C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/unidade_controle.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC|C:/Users/vitor/Documents/CEFET/Periodo_3/LAOC I/Aula 13/nRISC/Processador-nRISC/unidade_controle.v|
 !s101 -O0
